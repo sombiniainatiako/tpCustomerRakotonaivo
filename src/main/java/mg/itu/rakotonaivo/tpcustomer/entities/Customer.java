@@ -60,7 +60,7 @@ public class Customer implements Serializable {
     private Integer creditLimit;
     @JoinColumn(name = "DISCOUNT_CODE", referencedColumnName = "CODE")
     @ManyToOne(optional = false)
-    private Discount discountCode;
+    private Discount discount;
     @JoinColumn(name = "ZIP", referencedColumnName = "ZIP_CODE")
     @ManyToOne(optional = false)
     private MicroMarket zip;
@@ -152,12 +152,12 @@ public class Customer implements Serializable {
         this.creditLimit = creditLimit;
     }
 
-    public Discount getDiscountCode() {
-        return discountCode;
+    public Discount getDiscount() {
+        return discount;
     }
 
-    public void setDiscountCode(Discount discountCode) {
-        this.discountCode = discountCode;
+    public void setDiscount(Discount discount) {
+        this.discount = discount;
     }
 
     public MicroMarket getZip() {
